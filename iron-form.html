@@ -243,6 +243,8 @@ attach it to the `<iron-form>`:
           for (element in json) {
             this.$.helper.appendChild(this._createHiddenElement(element, json[element]));
           }
+          this.$.helper.method = this._form.method;
+          this.$.helper.action = this._form.action;
           this.$.helper.submit();
           this.fire('iron-form-submit');
         } else {
